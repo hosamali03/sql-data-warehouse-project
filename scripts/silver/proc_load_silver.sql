@@ -48,11 +48,11 @@ BEGIN
 		SELECT
 			cst_id,
 			cst_key,
-			TRIM(cst_first_name) AS cst_first_name,
-			TRIM(cst_last_name) AS cst_last_name,
+			TRIM(cst_firstname) AS cst_firstname,
+			TRIM(cst_lastname) AS cst_lastname,
 			CASE 
-				WHEN UPPER(TRIM(cst_material_status)) = 'S' THEN 'Single'
-				WHEN UPPER(TRIM(cst_material_status)) = 'M' THEN 'Married'
+				WHEN UPPER(TRIM(cst_marital_status)) = 'S' THEN 'Single'
+				WHEN UPPER(TRIM(cst_marital_status)) = 'M' THEN 'Married'
 				ELSE 'n/a'
 			END AS cst_marital_status, -- Normalize marital status values to readable format
 			CASE 
